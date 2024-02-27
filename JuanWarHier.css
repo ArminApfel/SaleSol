@@ -1,0 +1,169 @@
+body{
+    background-color: #f9eeb7cd ;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 720px 240px 1fr;
+    grid-template-rows: auto auto 1fr auto; /*auto passt sich automatisch der Inhaltsgröße an*/
+    grid-template-areas: 
+    ". Georg Georg ."/*der . steht für den freien platz*/
+    ". Karl Karl ."
+    ". Jeff Jose ."
+    ". Luigi Luigi ."
+}
+@media screen and (max-width: 960px) {
+    body{
+    grid-template-columns: 75% 25%;
+    grid-template-areas:
+      "Georg Georg"
+      "Karl Karl"
+      "Jeff Jose"
+      "Luigi Luigi";
+    }
+  }
+  /*Mobile-Last-Ansicht*/
+  @media screen and (max-width: 500px) {
+    body{
+      grid-template-rows: 200px auto 1fr 1fr 100px;
+      grid-template-columns: 100%;
+    grid-template-areas:
+      "Georg"
+      "Karl"
+      "Jeff"
+      "Jose"
+      "Luigi";
+  }
+  main{
+     height: 500px;
+  }
+}
+h1{
+    color: #bb24c0  ;
+    font-family: "Lucida Sans"; 
+    
+    
+}
+h2{
+    color: #5d9164 ;
+
+}
+a{
+    color:#4caabf  ;
+    text-decoration: none; /* entefernt unterstrich vom Link*/ 
+}
+a:visited{
+    color:#a6a6a6 ;
+}
+table{
+    border: 1px double #305535 ;
+    border-spacing: 0px; /*Zwischenraum wird gelöscht*/
+}
+td{
+    color: #5d9164 ;
+}
+#Jeff1{
+    width: 150px;
+    height: auto;
+    /*float: left; kann das theorethisch ausrichten*/
+    box-shadow: 8px 8px 10px #aaa;
+    margin: 5px 5px 5px 5px;
+}
+#Jeff2{
+    border: 6px double #bb24c0;
+    width: 150px;
+    height: auto;
+    margin: 5px 5px 5px 5px;
+}
+#Jeff3{
+    border-radius: 50%;
+    width: 150px;
+    height: auto;
+    border: 3px solid #305535;
+    margin: 5px 5px 5px 5px;
+}
+header{
+    border: 1px solid #305535;
+    border-radius: 20px 20px 20px 20px; /* Stellt den Grad der abgerundeten ecken dar*/
+    background-color: #5d9164;
+    margin: 10px 10px 10px; /* Stellt den Außenstadt zwischen browser und box dar*/
+    padding: 10px 10px 10px 10px; /* Stellt den Innenabstand zwischen Inhalt und box dar*/
+    text-align: center; /*Stellt den darin enthaltenen TExt zentriert dar*/
+    grid-area: Georg;
+}
+nav{
+    border: 1px solid #858b2d;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #d1c84a;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    grid-area: Karl;
+    
+}
+main{
+    border: 1px solid #303255;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #5d6791;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    grid-area: Jeff;
+    /* height: auto; wir vllt. nötig um den aside die richtige größe zu geben*/
+}
+section{
+    border: 1px solid #305155;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #5d7c91;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+}
+aside{
+    border: 1px solid #553030;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #915d5d;
+    margin: 10px 10px 10px 10px;
+    padding: 5px;
+    grid-area: Jose;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly; /*Gleichmäßiger Abstand zwischen den Kinderelementen*/
+    flex-direction: column; /*Kinderelemente werden untereinander ausgerichtet*/ 
+}
+footer{
+    border: 1px solid #554430;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #91795d;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    grid-area: Luigi;
+}
+
+#Inhalt{
+    background-color:  #5d7c91;
+    background: #5d6791;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+.Hintergrund{
+    background-color: #5d6791;
+    display: contents; /* sorgt dafür, dass es die websiten im iframe nicht verwürfelt*/
+}
+/*Flexbox Formatierung für nav*/
+nav>ul {
+    list-style-type: none; /* Aufzählungspunkte ausblenden */
+    display: flex; /* Flexbox-Container */
+}
+
+nav a {
+    background-color: #dbd3bd87; 
+    text-decoration: none; /* keine Unterstreichung */
+    padding: 10px; /* Abstand im den Link */
+}
+      
+nav a:hover {
+    background-color: #6ab77455;
+}
+ul{
+    list-style-type: square;
+}
+ol{
+    list-style-type:lower-roman;
+}
